@@ -1,12 +1,12 @@
 {
-  "name": "@ashtrindade/logger",
-  "version": "2.0.0",
+  "name": "@lunacrew/logger",
+  "version": "1.0.1",
   "description": "Node.js logger with dynamic log levels",
   "main": "dist/index.js",
-  "types": "index.d.ts",
+  "types": "src/index.d.ts",
   "files": [
-    "/dist",
-    "index.d.ts"
+    "/dist/src",
+    "src/index.d.ts"
   ],
   "scripts": {
     "test": "jest --verbose ./test",
@@ -17,19 +17,18 @@
     "clear:build": "rm -rf dist",
     "clear:coverage": "rm -rf coverage",
     "prepare": "husky install",
-    "help": "bash scripts/scripts-list.sh",
-    "pkg:publish": "rm -rf dist && npm run build && npm publish --access public"
+    "help": "bash scripts/scripts-list.sh"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ashtrindade/logger.git"
+    "url": "git+https://github.com/lunacrew/logger.git"
   },
   "author": "Ash Trindade",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ashtrindade/logger/issues"
+    "url": "https://github.com/lunacrew/logger/issues"
   },
-  "homepage": "https://github.com/ashtrindade/logger#readme",
+  "homepage": "https://github.com/lunacrew/logger#readme",
   "keywords": [
     "logger",
     "log",
