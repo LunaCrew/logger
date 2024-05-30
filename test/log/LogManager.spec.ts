@@ -1,4 +1,4 @@
-import LogManager from '../../src/log/LogManager'
+import LogManager from 'src/log/LogManager'
 
 describe('LogManager', () => {
   describe('constructor', () => {
@@ -82,6 +82,19 @@ describe('LogManager', () => {
       const message = 'Verbose message'
 
       LogManager.verbose(message)
+    })
+  })
+
+  describe('custom', () => {
+    it('should log a custom message with custom options', () => {
+
+      LogManager.custom('Message', { tag: 'Test', tagColor: 'red', tagIcon: 'ICON', iconColor: 'whiteOnGreen', messageColor: 'yellow'})
+    })
+
+    it('should log a custom message without custom options', () => {
+      const message = 'Custom message'
+
+      LogManager.custom(message)
     })
   })
 })

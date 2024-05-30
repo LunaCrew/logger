@@ -1,4 +1,4 @@
-import Log from '../index'
+import Log from 'src/index'
 import LogManager from '../src/log/LogManager'
 
 describe('Log', () => {
@@ -123,6 +123,30 @@ describe('Log', () => {
       Log.v(message)
 
       expect(logManagerSpy).toHaveBeenCalledWith(message, '')
+    })
+  })
+
+  describe('Custom', () => {
+    beforeEach(() => {
+      logManagerSpy = jest.spyOn(LogManager, 'custom')
+    })
+
+    it('should call LogManager.custom when calling Log.custom with tag', () => {
+      const tag = 'Test'
+      const message = 'Custom message'
+      const tagColor = 'red'
+      const tagIcon = 'X'
+      const messageColor = 'blue'
+
+      Log.custom(message, { tag, tagColor, tagIcon, messageColor })
+
+      expect(logManagerSpy).toHaveBeenCalledWith(message, {
+        tag: ' :: Test :: ',
+        tagColor: tagColor,
+        tagIcon: ' X ',
+        iconColor: 'base',
+        messageColor
+      })
     })
   })
 })
