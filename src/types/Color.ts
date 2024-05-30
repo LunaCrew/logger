@@ -1,14 +1,14 @@
-export type Color = {
-  base: string
-  black: string
-  cyan: string
-  red: string
-  blue: string
-  yellow: string
-  green: string
-  whiteOnGreen: string
-  whiteOnRed: string
-  whiteOnBlue: string
-  whiteOnYellow: string
-  blackOnWhite: string
-}
+export type Color =
+  'base'
+  | 'black'
+  | 'cyan'
+  | 'red'
+  | 'blue'
+  | 'yellow'
+  | 'green'
+  | 'white'
+  | 'blackOnWhite'
+  | 'whiteOnGreen'
+  | 'whiteOnRed'
+  | 'whiteOnBlue'
+  | 'whiteOnYellow'
