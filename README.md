@@ -3,7 +3,7 @@
 This Logger package is a utility for logging messages in your application. It provides a simple and flexible way to record important events, errors, and debugging information.
 
 <p align="center">
-  <img src="https://img.shields.io/npm/l/%40lunacrew%2Flogger?labelColor=181717" alt="License" />
+  <img alt="License MIT" src="https://img.shields.io/github/license/lunacrew/logger?logo=github&labelColor=181717">
   <img src="https://img.shields.io/github/actions/workflow/status/lunacrew/logger/coverage.yml?logo=jest&logoColor=C21325&label=tests&labelColor=181717" alt="Tests Status" />
   <br>
   <img src="https://img.shields.io/npm/v/%40lunacrew%2Flogger?label=version&logo=npm&labelColor=181717" alt="NPM Version" />
