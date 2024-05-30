@@ -1,6 +1,6 @@
 import { Color } from './types/Color'
 
-declare module '@ashtrindade/logger' {
+declare module '@lunacrew/logger' {
 
   /**
    * The `Log` class provides static methods for logging messages with different log levels.

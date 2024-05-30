@@ -39,7 +39,7 @@ Import the Log module into your code:
 
 ### Logging
 
-  ```js
+  ```ts
   /**
   * @required {string} message - data to be logged.
   * @optional {string} tag - use to help identify the source of the log message.
