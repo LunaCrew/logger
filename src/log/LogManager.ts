@@ -82,6 +82,7 @@ export default class LogManager {
       message = `${cyan}[ ${timestamp} ] ${red}:: ${tag} :: ${whiteOnRed} E ${base} => ${message}\n`
     }
     console.log(message)
+    throw new Error(message)
   }
 
   /**

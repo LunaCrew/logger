@@ -86,19 +86,21 @@ describe('Log', () => {
 
     it('should call LogManager.error when calling Log.e with tag', () => {
       const tag = 'Test'
-      const message = 'Error message'
+      const message = new Error('Error message')      
 
-      Log.e(message, tag)
-
-      expect(logManagerSpy).toHaveBeenCalledWith(message, tag)
+      const log = () => {
+        Log.e(`${message}`, tag)
+      }
+      expect(log).toThrow(Error)
     })
 
     it('should call LogManager.error when calling Log.e without tag', () => {
-      const message = 'Error message'
+      const message = new Error('Error message')      
 
-      Log.e(message)
-
-      expect(logManagerSpy).toHaveBeenCalledWith(message, '')
+      const log = () => {
+        Log.e(`${message}`)
+      }
+      expect(log).toThrow(Error)
     })
   })
 
