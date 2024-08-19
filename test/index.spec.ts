@@ -27,7 +27,7 @@ describe('Log', () => {
 
       Log.d(message)
 
-      expect(logManagerSpy).toHaveBeenCalledWith(message, '')
+      expect(logManagerSpy).toHaveBeenCalledWith(message, undefined)
     })
   })
 
@@ -51,7 +51,7 @@ describe('Log', () => {
 
       Log.i(message)
 
-      expect(logManagerSpy).toHaveBeenCalledWith(message, '')
+      expect(logManagerSpy).toHaveBeenCalledWith(message, undefined)
     })
   })
 
@@ -74,7 +74,7 @@ describe('Log', () => {
 
       Log.w(message)
 
-      expect(logManagerSpy).toHaveBeenCalledWith(message, '')
+      expect(logManagerSpy).toHaveBeenCalledWith(message, undefined)
     })
   })
 
@@ -86,21 +86,18 @@ describe('Log', () => {
 
     it('should call LogManager.error when calling Log.e with tag', () => {
       const tag = 'Test'
-      const message = new Error('Error message')      
+      const message = 'Error message'
 
-      const log = () => {
-        Log.e(`${message}`, tag)
-      }
-      expect(log).toThrow(Error)
+      Log.e(`${message}`, tag)
+      expect(logManagerSpy).toHaveBeenCalledWith(message, tag)
     })
 
     it('should call LogManager.error when calling Log.e without tag', () => {
-      const message = new Error('Error message')      
+      const message = 'Error message'
 
-      const log = () => {
-        Log.e(`${message}`)
-      }
-      expect(log).toThrow(Error)
+      Log.e(`${message}`)
+
+      expect(logManagerSpy).toHaveBeenCalledWith(message, undefined)
     })
   })
 
@@ -124,7 +121,7 @@ describe('Log', () => {
 
       Log.v(message)
 
-      expect(logManagerSpy).toHaveBeenCalledWith(message, '')
+      expect(logManagerSpy).toHaveBeenCalledWith(message, undefined)
     })
   })
 

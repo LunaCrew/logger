@@ -11,23 +11,23 @@ import LogManager from './log/LogManager'
  * @method custom - The custom message to log. 
  */
 export default class Log {
-  static readonly d = (message: string, tag: string = '') => {
+  static readonly d = (message: string, tag?: string) => {
     return LogManager.debug(message, tag)
   }
 
-  static readonly i = (message: string, tag: string = '') => {
+  static readonly i = (message: string, tag?: string) => {
     return LogManager.info(message, tag)
   }
 
-  static readonly w = (message: string, tag: string = '') => {
+  static readonly w = (message: string, tag?: string) => {
     return LogManager.warn(message, tag)
   }
 
-  static readonly e = (message: string, tag: string = '') => {
+  static readonly e = (message: string, tag?: string) => {
     return LogManager.error(message, tag)
   }
 
-  static readonly v = (message: string, tag: string = '') => {
+  static readonly v = (message: string, tag?: string) => {
     return LogManager.verbose(message, tag)
   }
 
