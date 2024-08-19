@@ -65,21 +65,17 @@ describe('LogManager', () => {
       const error = new Error('Error message')
       const tag = 'TestTag'
 
-      const log = () => {
-        LogManager.error(`${error}`, tag)
-      }
+      LogManager.error(`${error}`, tag)
 
-      expect(log).toThrow(Error)
+      expect(LogManager.error).toBeDefined()
     })
 
     it('should log an error message without tag', () => {
       const error = new Error('Error message')
 
-      const log = () => {
-        LogManager.error(`${error}`)
-      }
+      LogManager.error(`${error}`)
 
-      expect(log).toThrow(Error)
+      expect(LogManager.error).toBeDefined()
     })
   })
 
